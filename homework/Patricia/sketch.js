@@ -9,28 +9,67 @@ var eyeSize = 18;
 
 
 
+//var quote = [];
+var quoteText = ["GO CANES","LIVE IN THE MOMENT","YO"];
+
+var quotePosition = (100,100);
+
+var random = [2];
+
+var currentQuote=0;
+
+var showQuote = false;
+
+
+
+var showOrHide = false;
+
+var hitSize = 60;
+
+var hitX = 321;
+var hitY = 270;
+
+
+
+
+
+
+
 function setup() {
 
   createCanvas(500,500);
-  background('lemonchiffon');
+  background('lavender');
   pointX = width/2;
   pointY = height/2;
   console.log('pointX ' + pointX + ' pointY ' + pointY );
 
-
-  earButton = createButton("Click to style");
-  earButton.position(20,20);
-  earButton.mousePressed(function(){
-  //your action goes in here
-  //the button mousepressed function is tied to the general mouse pressed function
-    earColor = "pink";
-
+  show = createButton("CLICK ME");
+  show.position(width/2 - 50,height/2);
+  show.mousePressed(function(){
+    showOrHide = true;
+    show.hide();
 
   });
+
+
+
+
 }
+  //your action goes in here
+  //the button mousepressed function is tied to the general mouse pressed function
+
+
 
 
 function draw() {
+  background('lavender');
+
+
+
+  if(showOrHide == true){
+
+
+
 
   strokeWeight(1);
   fill(bodyColor);
@@ -69,19 +108,41 @@ function draw() {
   line(pointX - 70,pointY + 40,pointX - 21,pointY + 70);//left arm
 
 
-//HOMEWORK: 2 interactive thangs
+  strokeWeight(1)
+  fill(255)
+  rect(hitX,hitY,hitSize,hitSize);
+  fill("black");
+  text("READ ME" , 323,300);
 
+
+  if(showQuote == true){
+  text(quoteText[currentQuote],10,10);
+}//endofshowquote
+
+}//end of show or hide
+
+
+}//end of draw
+
+
+
+function mousePressed(){
+
+ if hitzone(mouseX > hitX && mouseX < hitX + hitSize && mouseY > hitY && mouseY < hitY + hitSize){
+ currentQuote= Math.floor(random(quoteText.length));
+ showQuote = true;
 }
 
-function keyPressed(){
-  bodyColor = 'green';
-  console.log("key " + key);
 
 
-  if(key == 'g'){
-     bodyColor = 'green';
- }
+
+
+
+
+
+
+
+
+
 
 }
-
-  //if ()
