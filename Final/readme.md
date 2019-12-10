@@ -1,7 +1,7 @@
 
 MOON SONGS
 
-My project serves as a music album promotion tool. It features the music of Pop/Jazz artist, Rachel Ohnsman, whose songs correspond with the each phase of the moon. My design helps create a listening journey; the cycle format allows users to begin with any moon phase.
+My project serves as a music album promotion tool. It features the music of Pop/Jazz artist, Rachel Ohnsman, whose songs correspond with the each phase of the moon. My design creates a listening journey; the cycle format allows users to begin with any moon phase.
 
 My design allows for a learning experience as well. When users click on the moon to listen to the music, the name of that moon phase appears.
 
